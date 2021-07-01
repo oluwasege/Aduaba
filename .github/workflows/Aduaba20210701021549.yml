@@ -50,6 +50,9 @@ jobs:
       with:
         name: webapp
         path: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+
+    - name: UpdateDb
+      run: dotnet ef database update
   deploy:
     runs-on: windows-latest
     needs: build
