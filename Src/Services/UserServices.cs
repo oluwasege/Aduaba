@@ -154,7 +154,8 @@ namespace Aduaba.Services
                 Email = model.Email,
                 FirstName = model.FirstName,
                 LastName = model.LastName,
-                PhoneNumber=model.PhoneNumber
+                PhoneNumber = model.PhoneNumber,
+                AvatarUrl = "tet"
             };
             var userWithSameEmail = await _userManager.FindByEmailAsync(model.Email);
             if (userWithSameEmail == null)
