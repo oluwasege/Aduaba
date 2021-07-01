@@ -163,12 +163,16 @@ namespace Aduaba.Services
                 if (result.Succeeded)
                 {
                     await _userManager.AddToRoleAsync(user, Authorization.Roles.User.ToString());
+                    return $"User Registered with username {user.UserName}";
                 }
-                return $"User Registered with username {user.UserName}";
+               
+                return "Error has occured";
+                
+                
             }
             else
             {
-                return $"Email {user.Email } is already registered.";
+                return $"User Registered with username {user.UserName}";
             }
         }
 
