@@ -49,7 +49,7 @@ namespace Aduaba
             services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddScoped<IUserServices, UserServices>();
             services.AddScoped<IAuthenticatedUserService, AuthenticatedUserService>();
-            services.AddScoped<ICategoryServices, CategoryServices>();
+            //services.AddScoped<ICategoryServices, CategoryServices>();
             //Adding DB Context with MSSQL
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(

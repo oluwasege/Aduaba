@@ -28,5 +28,6 @@ namespace Aduaba.Models
 
         [Required]
         public int CustomerId { get; set; }
+        public int MyProperty { get; set; }
     }
 }
